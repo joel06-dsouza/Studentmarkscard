@@ -1,0 +1,44 @@
+html {
+    margin:0;
+    padding:0;
+}
+.section {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px
+}
+.note {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px
+}
+.subject {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px
+}  
+.photos {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px
+} 
+.guide {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px
+}  
+.smc {
+    font-size: 25pt;
+    padding: 10px;
+    text-align: center;
+}
+table {
+    width: 100%;
+    font-size: 12pt;
+}
+table, th, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+}

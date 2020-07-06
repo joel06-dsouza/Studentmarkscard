@@ -1,0 +1,86 @@
+<html>
+   <head>
+     <link rel="stylesheet"href="studentsmarkscard.css">
+      <script src="studentsmarkscard.js"></script>
+  <div class="smc">
+     <p align="center">
+        <i><font color="#000000">Students Marks Card</font></i>
+     </p>
+  </div>
+     <hr width="500px" />
+   </head>
+   <body bgcolor="#C19870">
+    <div class="section">
+     <p>
+        This is a site where you can find the <b>Grand Total</b> as well the <b>Grade</b>.<br />The only thing you have to do is just enter the marks of your subjects.<br />
+     </p>
+    </div>
+  <div class="photos">
+  <svg>
+     <img src="https://images.theconversation.com/files/191827/original/file-20171025-25516-g7rtyl.jpg?ixlib=rb-1.1.0&q=30&auto=format&w=320&h=321&fit=crop&dpr=2" height="250px" width="200px" from="0" to="300" alt="" />  
+     <img src="https://cdn.mos.cms.futurecdn.net/PLcixwv9qrPXCp99jdzw57-650-80.jpg" height="250px" width="200px" from="150" to="450" alt="" /> 
+     <img src="https://m.jagranjosh.com/imported/images/E/Articles/maths2.jpg" height="250px" width="200px" from="300" to="600" alt="" />  
+  </svg>
+  </div>
+  <div class="note">
+     <p>
+        <b>NOTE</b>: This is only mend for students who have appeared for subjects like <i>Physics</i>, <i>Chemistry</i> and <i>Mathematics</i>.
+     </p>
+  </div>
+  <div class="subject">
+     <table border="1">
+         <tr>
+            <th><i>Physics</i></th>
+            <th><i>Chemistry</i></th>
+            <th><i>Mathematics</i></th>
+            <th><button onclick="smc()">Total</button></th>
+            <th><button onclick="smcs()">Grade</button></th>
+         </tr>
+         <tr>
+            <td><input type= "number" name="pmarks" id="pmarks"></td>
+            <td><input type= "number" name="cmarks" id="cmarks"></td>
+            <td><input type= "number" name="mmarks" id="mmarks"></td>
+            <td>    
+            <script>
+              function smc(){
+              var pmarks = document.getElementById("pmarks").value;
+              var cmarks = document.getElementById("cmarks").value;
+              var mmarks = document.getElementById("mmarks").value;
+
+              var r =parseFloat(pmarks)+parseFloat(cmarks)+parseFloat(mmarks);
+              var s = r/3;
+              document.getElementById("total").innerHTML= +r;
+             }
+            </script>
+             <p id="total"></p>
+            </td>            <td>
+              <script>
+              function smcs(){
+              var pmarks = document.getElementById("pmarks").value;
+              var cmarks = document.getElementById("cmarks").value;
+              var mmarks = document.getElementById("mmarks").value;
+
+              var r =parseFloat(pmarks)+parseFloat(cmarks)+parseFloat(mmarks);
+              var s = r/3;
+                        if(s >= 80){
+                             document.getElementById("grade").innerHTML= "A";
+                         } else if(s < 80 && s>=50){
+                             document.getElementById("grade").innerHTML= "B";
+                         } else {
+                             document.getElementById("grade").innerHTML= "C";
+                         }
+             }
+            </script>
+           <p id="grade"></p>
+            </td>
+         </tr>
+     </table>
+  </div>
+ <div class="guide">
+  <p>
+    <b>GUIDELINES:</b><br />1.Grade A shows that you have done very well(<i>Excellent</i>).<br />2.Grade B shows that you have acheived good marks.<br />3.Grade C shows that you need to work
+hard.<br />
+  </p>
+ </div>
+   </body>
+</html>
